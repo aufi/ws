@@ -1,0 +1,25 @@
+== WorkSnooper
+
+Tool for...
+
+=== Development
+
+Administration interface: https://github.com/sferik/rails_admin
+
+Setup:
+git clone https://github.com/aufi/ws.git
+cd ws
+bundle install
+rake db:create
+rake db:migrate
+rake db:seed
+
+(in case running bundle install with --path=vendor/bundle param, use bundle exec prefix in following commands)
+
+=== Usage
+
+Default admin login:
+admin@worksnooper.local / abc123456
+
+Data push example:
+curl -d "token=asdsdf&user=aufi&host=vila&log_action=test" http://localhost:3000/events/create
