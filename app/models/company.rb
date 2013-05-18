@@ -4,6 +4,7 @@ class Company < ActiveRecord::Base
   has_many :events
 
   validates_presence_of :name
+  validates :token, :uniqueness => true
 
   before_save :generate_token
 
